@@ -21,7 +21,7 @@ gulp.task('js', function(){
 
 	return gulp.src(['js/lib/sss.min.js', 'js/func.js'])
 		//.pipe(plumber())
-		.pipe(concat('core.min.js'))
+		.pipe(concat('func.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('./js/'));
 
