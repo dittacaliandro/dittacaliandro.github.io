@@ -1,0 +1,225 @@
+// Todo: fix desktop styles showing on iphone in landscape
+
+$small-header-height: 50px
+$big-header-height: 70px
+
+.site-nav
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  z-index: 9000
+
+  &__bar
+    background-color: $white
+    background-color: rgba($white, .92)
+    height: $small-header-height
+    line-height: $small-header-height
+    box-shadow: $base-box-shadow
+    position: relative
+    top: 0
+    right: 0
+    left: 0
+    z-index: 900
+    +clearfix
+
+  &__logo
+    margin: 0
+    float: left
+    font-size: $big-font-size
+
+  &__home-link
+    color: $dark-gray
+    font-weight: 600
+
+    &:hover,
+    &:focus
+      color: lighten($dark-gray, 10%)
+      text-decoration: none
+  
+  &__toggle
+    position: absolute
+    width: 1.6rem
+    height: 1.6rem
+    top: 12px
+    right: 0
+    cursor: pointer
+
+    & span
+      display: block
+      position: absolute
+      width: 100%
+      height: 2px
+      margin: .8rem 0 0 0
+      background: $dark-gray
+      transition: .25s ease all
+
+    & span:before,
+    & span:after
+      content: " "
+      position: absolute
+      width: 100%
+      height: 2px
+      background: $dark-gray
+      transition: .25s ease all
+
+    & span:before
+      margin: -.5em 0 0 0
+
+    & span:after
+      margin: .5em 0 0 0
+      
+    &.is-open
+      span
+        background-color: transparent
+      
+      span:before,
+      span:after
+        margin: 0
+
+      span:before
+        transform: rotate(135deg)
+        //+transform(rotate(135deg))
+      span:after
+        +transform(rotate(-135deg))
+  
+  &__list
+    display: none
+
+  &__list--m
+    visibility: hidden
+    opacity: 0
+    position: fixed
+    z-index: 800
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    text-align: center
+    background-color: $blue
+    transition: .25s ease all
+    transform: scale(1.5)
+    overflow: hidden
+    overflow-y: scroll
+    max-height: 100%
+    list-style: none
+    padding: 5rem 0 0 0
+    margin: 0
+
+    &.is-open
+      visibility: visible
+      opacity: 1
+      transform: scale(1)
+
+  &__item
+    font-family: $sans-serif-2
+    text-transform: uppercase
+    letter-spacing: 1px
+    font-weight: 400
+    font-size: 1.5rem
+    margin-bottom: 1rem
+
+  &__link
+    color: $white
+    display: block
+    -webkit-tap-highlight-color: rgba($white, 0.5)
+
+    &:hover
+      color: $dark-gray
+      text-decoration: none
+
+.cta-call
+  position: absolute
+  bottom: 1rem
+  right: 1rem
+.cta-mail
+  position: absolute
+  bottom: 1rem
+  left: 1rem
+
+@media (min-width: 440px)
+  .site-nav__toggle
+    right: 0
+
+@media (min-width: em(800px))
+
+  .site-nav
+    +clearfix
+    
+    &__bar
+      height: $big-header-height
+      line-height: $big-header-height
+
+    &__toggle
+      display: none
+    
+    &__list--m
+      display: none
+
+    &__list
+      display: block
+      margin: 0
+      float: right
+
+    &__item
+      font-family: $sans-serif-2
+      display: inline
+      text-transform: uppercase
+      letter-spacing: 1px
+      margin-right: 1rem
+      font-weight: 400
+      line-height: $big-header-height
+      font-size: 1rem
+
+      &:last-child
+        margin-right: 0
+
+    &__link
+      color: $base-font-color
+      position: relative
+      padding: 0 .4rem
+      display: inline-block
+
+      &:focus
+        color: $medium-gray
+        text-decoration: none
+      
+      &:hover,
+      &:active
+        color: $action-color-on
+
+      &:after
+        content: ""
+        display: block
+        position: absolute
+        left: 50%
+        bottom: 0px
+        width: 0
+        height: 4px
+        background-color: $blue
+        +transition(all .2s $ease-in-out-back)
+
+      &:hover:after
+        width: 100%
+        left: 0
+
+      &:active:after
+        width: 110%
+        left: -5%
+        +transition(all .05s ease-out)
+
+      &.is-active
+        color: $blue
+        +transition(all .05s ease-out)
+
+      &.is-active:after
+        width: 100%
+        left: 0
+
+      &.is-active:hover:after
+        width: 110%
+        left: -5%
+
+      &.is-active:active:after
+        width: 120%
+        left: -10%

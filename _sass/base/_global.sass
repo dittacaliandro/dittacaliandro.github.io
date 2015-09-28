@@ -1,0 +1,132 @@
+/* Box Sizing
+/*---------------------------------------------------------------------------*/
+html
+	box-sizing: border-box
+
+*, *:before, *:after
+	box-sizing: inherit
+
+img
+	box-sizing: content-box
+
+/* Basic Styles
+/*---------------------------------------------------------------------------*/
+html,
+body,
+button
+	-moz-osx-font-smoothing: grayscale
+	-webkit-font-smoothing: antialiased
+	font-smoothing: antialiased
+
+html,
+body
+	margin: 0
+	padding: 0
+	font-size: 1em
+
+img,
+picture
+	margin: 0
+	//max-width: 100%
+	width: 100%
+	height: auto
+
+// Basic Typography
+body
+	color: $base-font-color
+	font-family: $base-font-family
+	line-height: $base-line-height
+	background-color: $base-background-color
+	font-weight: $base-font-weight
+
+h3,
+h4,
+h5,
+h6
+	font-family: $heading-font-family
+	font-size: $base-font-size
+	line-height: $heading-line-height
+	margin: 0 0 $small-spacing
+	color: $heading-font-color
+
+h1,
+h2
+	font-family: $heading-font-family
+	font-size: $big-font-size
+	color: darken($base-font-color, 10%)
+	font-weight: $base-font-weight
+
+p
+	margin: 0 0 $base-spacing
+
+b, strong
+	color: $dark-gray
+
+mark
+	background: saturate($yellow, 10%)
+
+hr
+	display: block
+	height: 1px
+	border: 0
+	border-bottom: 1px dashed $medium-gray
+	margin: $base-spacing 0
+	padding: 0
+
+// Links
+a
+	color: $action-color
+	text-decoration: none
+	transition: color 0.15s linear
+	-webkit-tap-highlight-color: rgba($blue, .6)
+
+	&:focus,
+	&:hover,
+		color: $action-color-on
+		text-decoration: underline
+
+	&:active,
+	&:focus
+		outline: none
+
+// Basic Table Styles
+table
+	border-collapse: collapse
+	margin: $small-spacing 0
+	table-layout: fixed
+	width: 100%
+
+th
+	border-bottom: 1px solid $base-border-color
+	color: $heading-font-color
+	font-weight: 500
+	padding: $small-spacing 0
+	text-align: left
+
+td
+	padding: $small-spacing 0
+
+tr
+	border-bottom: $base-border
+
+	&:last-child
+		border: none
+
+tr,
+td,
+th
+	vertical-align: middle
+	padding-left: 1rem
+
+// Basic forms styles
+ 
+input, textarea
+  color: #A5A3A3 !important
+  background-color: lighten($light-gray, 3%)
+  border-radius: $base-border-radius
+  padding: 1rem
+  border: 1px solid lighten($medium-gray, 20%)
+  display: block
+  transition: box-shadow 0.3s
+  width: 100%
+  margin: .5rem auto

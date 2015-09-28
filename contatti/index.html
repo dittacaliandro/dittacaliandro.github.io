@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ditta Caliandro</title>
+    <title>Contatti - Ditta Caliandro</title>
     <meta name="description" content="Vendita di materiale per l'edilizia, ceramiche e arredo bagno">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,7 @@
     <!-- <script src="js/lib/modernizr-dev.min.js"></script> -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700|Roboto:700,400,400italic' rel='stylesheet' type='text/css'>
    <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
-    <link rel="stylesheet" href="css/core.min.css">
+    <link rel="stylesheet" href="../css/core.min.css">
   </head>
   <body>
 		
@@ -30,7 +30,7 @@
 						  	<li class="site-nav__item"><a href="/brand/" class="site-nav__link">Brand</a></li>
 <!-- 				        <li class="site-nav__item"><a href="/offerte/" class="site-nav__link">Offerte</a></li>
  -->				        <!-- <li class="site-nav__item"><a href="/dove-siamo/" class="site-nav__link">Dove Siamo</a></li> -->
-				        <li class="site-nav__item"><a href="/contatti/" class="site-nav__link">Contatti</a></li>
+				        <li class="site-nav__item"><a href="/contatti/" class="site-nav__link is-active">Contatti</a></li>
 <!-- 				        <li class="site-nav__item"><a href="#" class="site-nav__link  nav-link__search"><i class="fa fa-lg fa-search"></i></a></li>
  -->				    </ul>
 					</div>
@@ -53,76 +53,45 @@
 	  </nav>
 	
 	<div id="site-content" class="site-content">
-	<div class="container">
-		
-		<section id="welcome-slider" class="row">
 
-			<div class="home-slider twelve columns">
-			  <div class="home-slider__pictures slider">
-			    <img src="img/slider-01.jpg" />
-					<img src="img/slider-02.jpg" />
-					<img src="img/slider-03.jpg" />
-			  </div>
-			  <div class="home-slider__welcome-text">
-			    Offerta!! Vendesi pavimento in gres porcellanato colore noce chiaro in 1 scelta misure 20x60 Made in Italy disponibili grandi quantità a soli 12.50 euro al mq. Occasione da non perdere. Per qualsiasi informazione non esitate a contattarmi.
-			  </div>
+		<div class="container">
+		<div class="g-map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3788.919872301754!2d17.346606033931003!3d40.69964797693749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x134653a349a735c7%3A0x6bad4c31d976c12a!2sCorso+Messapia%2C+3%2C+74015+Martina+Franca+TA!3m2!1d40.699647999999996!2d17.3489181!5e1!3m2!1sen!2sit!4v1443389155217" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
+			<div class="contact-form">
+			<h1>Come contattarci</h1>
+				<div class="row">
+					<div class="two-thirds column">
 
-		</section>
-
-		<section id="products">
-			<h2 class="section-heading">Cosa vendiamo</h2>
-
-			<div class="row">
-
-				<div class="card one-third column">
-					<div class="card__thumb">
-						<img alt="Pavimenti" class="top-radius" src="img/prod-card-01.jpg">
-				    <h2 class="card__title">Pavimenti e rivestimenti</h2>
-				  </div>
-
-					<div class="card__description">
-						La nostra azienda si occupa di ceramiche per pavimenti (interni ed esterni), rivestimenti, cucine, arredo.
+						<div class="form-container">
+							<h3>Form di contatto</h3>
+							<form action="//formspree.io/info@dittacaliandro.it"
+			      method="POST">
+							  <input type="text" name="name" placeholder="Nome">
+							  <input type="email" name="_replyto" placeholder="E-Mail">
+							  <textarea name="message" rows="5" placeholder="Il tuo messaggio"></textarea>
+							  <input type="submit" class="btn" value="Invia">
+							</form>
+						</div>
 					</div>
-
-					<!-- <div class="card__link">
-						<a href="#pavimenti">Vai alla galleria</a>
-					</div> -->
-				</div>
-
-				<div class="card one-third column">
-					<div class="card__thumb">
-						<img alt="Pavimenti" class="top-radius" src="img/prod-card-02.jpg">
-				    <h2 class="card__title">Arredo bagno</h2>
-				  </div>
-
-					<div class="card__description">
-						La nostra azienda si occupa di ceramiche per pavimenti (interni ed esterni), rivestimenti, cucine, arredo.
+					
+					<div class="one-third column">
+						<h3>Di persona all'indirizzo:</h3>
+						<p class="info-f__address"><i class="fa fa-map-pin"></i> Via Ceglie 8<br> 
+						Martina Franca (TA)<br> 
+						74015
+						</p>
+						<h3>Via E-mail o telefono</h3>
+						<p>
+							Potete contattarci
+						</p>
+						<div><a href="callto:0804858597" class="btn btn--green"><i class="fa fa-phone-square"></i> 0804858597</a><br><br>
+            <div><a href="mailto:info@dittacaliandro.it" class="btn btn--blue2"><i class="fa fa-envelope"></i> E-Mail</a>
 					</div>
-
-					<!-- <div class="card__link">
-						<a href="#pavimenti">Vai alla galleria</a>
-					</div> -->
 				</div>
-
-				<div class="card one-third column">
-					<div class="card__thumb">
-						<img alt="Pavimenti" class="top-radius" src="img/prod-card-03.jpg">
-				    <h2 class="card__title">Sanitari, rubinetti e accessori</h2>
-				  </div>
-
-					<div class="card__description">
-						La nostra azienda si occupa di ceramiche per pavimenti (interni ed esterni), rivestimenti, cucine, arredo.
-					</div>
-
-					<!-- <div class="card__link">
-						<a href="#pavimenti">Vai alla galleria</a>
-					</div> -->
-				</div>
-		
 			</div>
-		</section>
-	</div>
+		</div>
+
 	</div>
 
 	<footer id="site-footer" class="site-footer">
@@ -153,8 +122,8 @@
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="js/core.min.js"></script>
-
+	<script src="../js/core.min.js"></script>
+	
 	<!-- Google Analytics Code -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

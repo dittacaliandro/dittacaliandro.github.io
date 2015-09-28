@@ -1,0 +1,47 @@
+%btn
+	border-radius: $base-border-radius
+	color: $white
+	display: inline-block
+	//font-weight: bold
+	text-align: center
+	vertical-align: middle
+	touch-action: manipulation
+	cursor: pointer
+	border: 1px solid transparent
+	white-space: nowrap
+	padding: 6px 12px
+	width: 80%
+	font-size: $base-font-size
+	line-height: $base-line-height
+	-webkit-user-select: none
+	transition: background 0.15s linear
+	
+	&:hover,
+	&:active,
+	&:focus
+		color: $white
+		text-decoration: none
+
+.btn
+	@extend %btn
+	background-color: $dark-gray
+
+	&:hover
+		background-color: lighten($dark-gray, 10%)
+
+.btn--green
+	@extend %btn
+	background-color: $green
+	
+	&:hover
+		background-color: lighten($green, 8%)
+
+.btn--blue2
+	@extend %btn
+	background-color: $blue2
+	
+	&:hover
+		background-color: lighten($blue2, 8%)
+
+.site-nav__list--m .btn
+	width: 40%
