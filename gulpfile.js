@@ -4,16 +4,17 @@ var gulp 						= require('gulp'),
 		svgstore 				= require('gulp-svgstore'),
 		svgmin 					= require('gulp-svgmin'),
 		inject 					= require('gulp-inject'),
-	//	plumber					= require('gulp-plumber'),
+//	plumber					= require('gulp-plumber'),
 		concat 					= require('gulp-concat'),
 		uglify 					= require('gulp-uglify'),
 		sass 						= require('gulp-sass'),
 		sourcemaps 			= require('gulp-sourcemaps'),
 		autoprefixer 		= require('gulp-autoprefixer'),
 		minifyCss				= require('gulp-minify-css'),
+		changed 				= require('gulp-changed'),
 		imageOptim			= require('gulp-imageoptim'),
 		imageResize			= require('gulp-image-resize'),
-		cache 					= require('gulp-cache'), // https://www.npmjs.com/package/gulp-cache
+//	cache 					= require('gulp-cache'), // https://www.npmjs.com/package/gulp-cache
 		rename					= require('gulp-rename');
 
 // JavaScript
@@ -51,7 +52,17 @@ gulp.task('styles', function() {
 });
 
 // Images
-
+gulp.task('slider-img', function () {
+  return gulp.src('./img/src/slider-*.{jpg,png}')
+  	.pipe(changed())
+    .pipe(imageResize({ 
+      width : 960,
+      height : 400,
+      crop : true,
+      upscale : false
+    }))
+    .pipe(gulp.dest('./img/home/'));
+});
 
 
 // SVG
