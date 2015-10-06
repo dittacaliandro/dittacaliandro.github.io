@@ -29,9 +29,7 @@ gulp.task('js', function(){
 });
 
 // Makes sure the javascript files are all concatenated and minified before reloading
-gulp.task('js-watch', ['js'], function() {
-    browserSync.reload();
-});
+gulp.task('js-watch', ['js'], browserSync.reload);
 
 // Styles
 gulp.task('styles', function() {
@@ -54,12 +52,12 @@ gulp.task('styles', function() {
 // Images
 gulp.task('slider-img', function () {
   return gulp.src('./img/src/slider-*.{jpg,png}')
-  	.pipe(changed())
+  	.pipe(changed('./img/home/'))
     .pipe(imageResize({ 
       width : 960,
       height : 400,
       crop : true,
-      upscale : false
+      upscale : true
     }))
     .pipe(gulp.dest('./img/home/'));
 });
