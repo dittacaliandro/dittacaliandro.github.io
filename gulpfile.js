@@ -62,6 +62,17 @@ gulp.task('slider-img', function () {
     .pipe(gulp.dest('./img/home/'));
 });
 
+gulp.task('brand-img', function () {
+  return gulp.src('./img/src/brand/*.{jpg,png}')
+  	.pipe(changed('./img/brand/'))
+    .pipe(imageResize({ 
+      width : 320,
+      crop : false,
+      upscale : true
+    }))
+    .pipe(gulp.dest('./img/brand/'));
+});
+
 
 // SVG
 // gulp.task('svg', function () {
