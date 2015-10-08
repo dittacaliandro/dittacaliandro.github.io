@@ -51,8 +51,8 @@ gulp.task('styles', function() {
 
 // Images
 gulp.task('slider-img', function () {
-  return gulp.src('./img/src/slider-*.{jpg,png}')
-  	.pipe(changed('./img/home/'))
+  return gulp.src('./img/src/slider/slider-*.{jpg,png}')
+  	.pipe(changed('./img/home/slider-*.{jpg,png}'))
     .pipe(imageResize({ 
       width : 960,
       height : 400,
