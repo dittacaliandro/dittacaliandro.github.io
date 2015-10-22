@@ -1,0 +1,26 @@
+.tab
+	list-style: none
+	text-align: center
+	margin: 0
+	margin-bottom: 3rem
+	li
+		display: inline
+		margin-right: 2rem
+		font-size: rem(14px)
+
+		a
+			background-color: $dark-gray
+			padding: .6rem
+			border-radius: $base-border-radius
+			color: $light-gray
+			text-decoration: none
+			&:hover
+				background-color: lighten($dark-gray, 8%)
+			&.active
+				background-color: $blue
+
+@media (max-width: 620px)
+	.tab
+		li
+			display: block
+			margin-bottom: 2rem

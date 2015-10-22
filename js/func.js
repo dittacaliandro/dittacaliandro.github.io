@@ -7,4 +7,37 @@ $(document).ready(function(){
 		});
 
     $('.slider').sss();
+
+    $(".tab--pavimenti").click(function() {
+
+    	$(this).addClass("active");
+    	$(".tab--sanitari, .tab--bagno").removeClass("active");
+
+  		$("#pavimenti").removeClass("u-hidden");
+
+  		$("#sanitari, #bagno").addClass("u-hidden");
+
+		});
+
+		$(".tab--sanitari").click(function() {
+
+			$(this).addClass("active");
+    	$(".tab--pavimenti, .tab--bagno").removeClass("active");
+
+  		$("#sanitari").removeClass("u-hidden");
+
+  		$("#pavimenti, #bagno").addClass("u-hidden");
+
+		});
+
+		$(".tab--bagno").click(function() {
+
+			$(this).addClass("active");
+    	$(".tab--sanitari, .tab--pavimenti").removeClass("active");
+
+  		$("#bagno").removeClass("u-hidden");
+
+  		$("#sanitari, #pavimenti").addClass("u-hidden");
+
+		});
 });
