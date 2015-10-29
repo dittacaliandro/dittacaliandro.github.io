@@ -55,7 +55,7 @@ gulp.task('slider-img', function () {
   	.pipe(changed('./img/home/slider-*.{jpg,png}'))
     .pipe(imageResize({ 
       width : 960,
-      height : 400,
+      height : 500,
       crop : true,
       upscale : true
     }))
